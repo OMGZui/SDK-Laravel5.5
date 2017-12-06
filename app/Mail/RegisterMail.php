@@ -28,7 +28,9 @@ class RegisterMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.testEmail')
+        return $this
+            ->subject('小粽子测试发送邮件')
+            ->markdown('emails.testEmail')
             ->with([
                 'name' => '粽子哥',
             ]);

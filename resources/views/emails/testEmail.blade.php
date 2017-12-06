@@ -9,7 +9,11 @@
 </head>
 
 <body>
-	@component('mail::message') # {{ $name }} @endcomponent
+	@component('mail::message')
+     - {{ $name }} 
+     - {{ $name }} 
+     - {{ $name }} 
+    @endcomponent
 </body>
 
 </html>

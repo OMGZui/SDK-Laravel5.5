@@ -17,7 +17,9 @@ class TestController extends Controller
 
     public function send()
     {
-        Mail::to('15679769443@163.com')->send(new RegisterMail());
+        $to = '15679769443@163.com';
+        Mail::to($to)
+            ->send(new RegisterMail());
         return 'send ok';
     }
 }
