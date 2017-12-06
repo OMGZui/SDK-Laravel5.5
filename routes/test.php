@@ -14,3 +14,4 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/','TestController@demo');
+Route::get('/send','TestController@send');
