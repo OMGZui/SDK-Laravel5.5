@@ -24,7 +24,8 @@ class ExampleTest extends TestCase
 
     }
 
-    public function testRegisterMail()
+
+    public function testRegisterMail():void
     {
         Mail::fake();
 
