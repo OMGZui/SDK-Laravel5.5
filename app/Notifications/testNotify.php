@@ -2,6 +2,7 @@
 
 namespace App\Notifications;
 
+use App\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -11,14 +12,16 @@ class testNotify extends Notification
 {
     use Queueable;
 
+    protected $user;
     /**
      * Create a new notification instance.
+     * @param $user
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(User $user)
     {
-        //
+        $this->user = $user;
     }
 
     /**
@@ -29,7 +32,7 @@ class testNotify extends Notification
      */
     public function via($notifiable)
     {
-        return ['mail'];
+        return ['mail','database'];
     }
 
     /**
@@ -57,5 +60,10 @@ class testNotify extends Notification
         return [
             //
         ];
+    }
+
+    public function toDatabase($notifiable)
+    {
+        return $this->user->toArray();
     }
 }

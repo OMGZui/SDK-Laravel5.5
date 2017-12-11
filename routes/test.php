@@ -15,4 +15,7 @@ use Illuminate\Http\Request;
 
 Route::get('/','TestController@demo');
 Route::get('/send','TestController@mail');
-Route::get('/notify','TestController@notify');
+
+Route::get('/notify/{notify}/edit','TestController@notify');
+
+Route::get('/notifyDb','TestController@notifyDb');
