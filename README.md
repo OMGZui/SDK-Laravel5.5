@@ -25,8 +25,8 @@ phpunit
 - [ ] 任务队列Jobs
 - [ ] 策略Policies
 - [ ] 任务队列Jobs
-- [ ] 资源Resource
-- [ ] 异常Exception
+- [ ] 资源Resources
+- [ ] 异常Exceptions
 - [x] 控制器Controllers
 - [ ] 中间件Middleware
 - [x] 请求Requests
@@ -43,4 +43,7 @@ phpunit
 - [x] 转化Transforms
 - [x] 测试Tests
 - [x] 规则Rules
+- [x] 路由Routes
+- [x] 配置Configs
+- [x] 扩展Packages
 
