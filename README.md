@@ -7,7 +7,6 @@
 ## 老哥，怎么用啊
 
 ```php
-
 git clone https://github.com/OMGZui/SDK-Laravel5.5.git
 composer install
 cp .env.example .env
@@ -22,7 +21,6 @@ phpunit
 
 - [ ] 事件Events
 - [ ] 监听者Listeners
-- [ ] 任务队列Jobs
 - [ ] 策略Policies
 - [ ] 任务队列Jobs
 - [ ] 资源Resources
@@ -50,7 +48,7 @@ phpunit
 ## 小知识
 
 ```php
-# 增删改查，改这里PUT|PATCH，使用postman时Header记得加上Content-Type:application/x-www-form-urlencoded
+# 增删改查，改这里PUT|PATCH，使用postman时Headers记得加上Content-Type:application/x-www-form-urlencoded
 
 | GET|HEAD  | api/apply          | apply.index      | App\Http\Controllers\Api\ApplyController@index   |
 | POST      | api/apply          | apply.store      | App\Http\Controllers\Api\ApplyController@store   |
