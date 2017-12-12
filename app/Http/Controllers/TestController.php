@@ -4,10 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Mail\RegisterMail;
 use App\Notifications\testNotify;
-use App\User;
-use Illuminate\Http\Request;
-use Illuminate\Notifications\DatabaseNotification;
-use Illuminate\Support\Carbon;
+use App\Models\User;
+
 use Illuminate\Support\Facades\Mail;
 use OMGZui\OMGZui\Facades\OMGZui;
 
