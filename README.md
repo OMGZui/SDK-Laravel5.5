@@ -47,6 +47,19 @@ phpunit
 - [x] 配置Configs
 - [x] 扩展Packages
 
+## 小知识
+
+```php
+# 增删改查，改这里PUT|PATCH，使用postman时Header记得加上Content-Type:application/x-www-form-urlencoded
+
+|        | GET|HEAD  | api/apply                 | apply.index      | App\Http\Controllers\Api\ApplyController@index                         |            |
+|        | POST      | api/apply                 | apply.store      | App\Http\Controllers\Api\ApplyController@store                         |            |
+|        | GET|HEAD  | api/apply/{apply}         | apply.show       | App\Http\Controllers\Api\ApplyController@show                          |            |
+|        | PUT|PATCH | api/apply/{apply}         | apply.update     | App\Http\Controllers\Api\ApplyController@update                        |            |
+|        | DELETE    | api/apply/{apply}         | apply.destroy    | App\Http\Controllers\Api\ApplyController@destroy 
+
+```
+
 ## 抄袭哪里的啊
 
 [jcc/blog](https://github.com/jcc/blog)
