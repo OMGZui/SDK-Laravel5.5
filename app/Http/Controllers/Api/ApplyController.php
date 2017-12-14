@@ -8,9 +8,9 @@ use Webpatser\Uuid\Uuid;
 
 class ApplyController extends ApiController
 {
-    public function __construct(ApplyRepository $applyRepository)
+    public function __construct(ApplyRepository $repository)
     {
-        parent::__construct($applyRepository);
+        parent::__construct($repository);
     }
 
     /**

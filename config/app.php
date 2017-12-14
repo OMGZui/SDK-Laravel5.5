@@ -168,7 +168,7 @@ return [
          * Package Service Providers...
          */
         \OMGZui\OMGZui\OMGZuiServiceProvider::class,
-
+        Jenssegers\Mongodb\MongodbServiceProvider::class,
         /*
          * Application Service Providers...
          */

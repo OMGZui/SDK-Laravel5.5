@@ -8,11 +8,11 @@
 
 namespace App\Repositories;
 
-use App\Models\Apply;
+use App\Models\Movies;
 
-class ApplyRepository extends BaseRepository
+class MoviesRepository extends BaseRepository
 {
-    public function __construct(Apply $repository)
+    public function __construct(Movies $repository)
     {
         parent::__construct($repository);
     }

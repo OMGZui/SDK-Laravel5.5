@@ -14,3 +14,5 @@ use Illuminate\Http\Request;
 */
 
 Route::resource('apply','Api\\ApplyController',['except' => ['create','edit']]);
+
+Route::resource('movies','Api\\MoviesController',['except' => ['create','edit']]);
