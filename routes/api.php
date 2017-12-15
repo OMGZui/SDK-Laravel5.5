@@ -16,3 +16,16 @@ use Illuminate\Http\Request;
 Route::resource('apply','Api\\ApplyController',['except' => ['create','edit']]);
 
 Route::resource('movies','Api\\MoviesController',['except' => ['create','edit']]);
+
+Route::group([
+    'middleware' => 'api',
+    'prefix' => 'auth'
+
+], function ($router) {
+
+    Route::post('login', 'AuthController@login');
+    Route::post('logout', 'AuthController@logout');
+    Route::post('refresh', 'AuthController@refresh');
+    Route::post('me', 'AuthController@me');
+
+});
