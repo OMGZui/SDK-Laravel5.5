@@ -50,8 +50,8 @@ class Response
      *
      * @param null $resource
      * @param TransformerAbstract|null $transformer
-     *
      * @return \Illuminate\Http\JsonResponse
+     * @throws \Exception
      */
     public function withCreated($resource = null, TransformerAbstract $transformer = null)
     {
@@ -179,8 +179,8 @@ class Response
      *
      * @param $item
      * @param TransformerAbstract|null $transformer
-     *
      * @return \Illuminate\Http\JsonResponse
+     * @throws \Exception
      */
     public function item($item, TransformerAbstract $transformer = null)
     {
@@ -194,8 +194,8 @@ class Response
      *
      * @param $items
      * @param TransformerAbstract|null $transformer
-     *
      * @return \Illuminate\Http\JsonResponse
+     * @throws \Exception
      */
     public function collection($items, TransformerAbstract $transformer = null)
     {

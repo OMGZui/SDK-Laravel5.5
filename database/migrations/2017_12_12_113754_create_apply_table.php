@@ -18,7 +18,7 @@ class CreateApplyTable extends Migration
         Schema::create('apply', function (Blueprint $table) {
             $table->increments('id');
             $table->uuid('uuid');
-            $table->integer('group_id')->default(static::DEFAULT)->comment('组别');
+            $table->integer('group_id')->default(static::DEFAULT)->comment('组别id');
 //            $table->text('apply_require')->comment('报名要求');
             $table->string('name')->default(static::DEFAULT)->comment('姓名');
             $table->string('email')->unique()->default(static::DEFAULT)->comment('邮箱');

@@ -170,6 +170,7 @@ return [
         \OMGZui\OMGZui\OMGZuiServiceProvider::class,
         Jenssegers\Mongodb\MongodbServiceProvider::class,
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -228,6 +229,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'OMGZui' => \OMGZui\OMGZui\Facades\OMGZui::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
     ],
 
 ];

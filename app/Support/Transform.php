@@ -42,8 +42,8 @@ class Transform
      *
      * @param $data
      * @param TransformerAbstract|null $transformer
-     *
      * @return array
+     * @throws \Exception
      */
     public function collection($data, TransformerAbstract $transformer = null)
     {
@@ -63,8 +63,8 @@ class Transform
      *
      * @param $data
      * @param TransformerAbstract|null $transformer
-     *
      * @return array
+     * @throws \Exception
      */
     public function item($data, TransformerAbstract $transformer = null)
     {

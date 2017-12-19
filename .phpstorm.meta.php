@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2017-12-15.
+    * Generated on 2017-12-19.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -51,6 +51,8 @@ namespace PHPSTORM_META {
         'tymon.jwt.claim.factory' => \Tymon\JWTAuth\Claims\Factory::class,
         'tymon.jwt.payload.factory' => \Tymon\JWTAuth\Factory::class,
         'tymon.jwt.secret' => \Tymon\JWTAuth\Console\JWTGenerateSecretCommand::class,
+        'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
+        'command.debugbar.clear' => \Barryvdh\Debugbar\Console\ClearCommand::class,
         'omgzui' => \OMGZui\OMGZui\Demo::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'validation.presence' => \Illuminate\Validation\DatabasePresenceVerifier::class,
@@ -193,6 +195,8 @@ namespace PHPSTORM_META {
         'tymon.jwt.claim.factory' => \Tymon\JWTAuth\Claims\Factory::class,
         'tymon.jwt.payload.factory' => \Tymon\JWTAuth\Factory::class,
         'tymon.jwt.secret' => \Tymon\JWTAuth\Console\JWTGenerateSecretCommand::class,
+        'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
+        'command.debugbar.clear' => \Barryvdh\Debugbar\Console\ClearCommand::class,
         'omgzui' => \OMGZui\OMGZui\Demo::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'validation.presence' => \Illuminate\Validation\DatabasePresenceVerifier::class,
@@ -335,6 +339,8 @@ namespace PHPSTORM_META {
         'tymon.jwt.claim.factory' => \Tymon\JWTAuth\Claims\Factory::class,
         'tymon.jwt.payload.factory' => \Tymon\JWTAuth\Factory::class,
         'tymon.jwt.secret' => \Tymon\JWTAuth\Console\JWTGenerateSecretCommand::class,
+        'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
+        'command.debugbar.clear' => \Barryvdh\Debugbar\Console\ClearCommand::class,
         'omgzui' => \OMGZui\OMGZui\Demo::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'validation.presence' => \Illuminate\Validation\DatabasePresenceVerifier::class,
@@ -477,6 +483,8 @@ namespace PHPSTORM_META {
         'tymon.jwt.claim.factory' => \Tymon\JWTAuth\Claims\Factory::class,
         'tymon.jwt.payload.factory' => \Tymon\JWTAuth\Factory::class,
         'tymon.jwt.secret' => \Tymon\JWTAuth\Console\JWTGenerateSecretCommand::class,
+        'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
+        'command.debugbar.clear' => \Barryvdh\Debugbar\Console\ClearCommand::class,
         'omgzui' => \OMGZui\OMGZui\Demo::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'validation.presence' => \Illuminate\Validation\DatabasePresenceVerifier::class,
@@ -619,6 +627,8 @@ namespace PHPSTORM_META {
         'tymon.jwt.claim.factory' => \Tymon\JWTAuth\Claims\Factory::class,
         'tymon.jwt.payload.factory' => \Tymon\JWTAuth\Factory::class,
         'tymon.jwt.secret' => \Tymon\JWTAuth\Console\JWTGenerateSecretCommand::class,
+        'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
+        'command.debugbar.clear' => \Barryvdh\Debugbar\Console\ClearCommand::class,
         'omgzui' => \OMGZui\OMGZui\Demo::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'validation.presence' => \Illuminate\Validation\DatabasePresenceVerifier::class,
@@ -761,6 +771,8 @@ namespace PHPSTORM_META {
         'tymon.jwt.claim.factory' => \Tymon\JWTAuth\Claims\Factory::class,
         'tymon.jwt.payload.factory' => \Tymon\JWTAuth\Factory::class,
         'tymon.jwt.secret' => \Tymon\JWTAuth\Console\JWTGenerateSecretCommand::class,
+        'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
+        'command.debugbar.clear' => \Barryvdh\Debugbar\Console\ClearCommand::class,
         'omgzui' => \OMGZui\OMGZui\Demo::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'validation.presence' => \Illuminate\Validation\DatabasePresenceVerifier::class,
@@ -903,6 +915,8 @@ namespace PHPSTORM_META {
         'tymon.jwt.claim.factory' => \Tymon\JWTAuth\Claims\Factory::class,
         'tymon.jwt.payload.factory' => \Tymon\JWTAuth\Factory::class,
         'tymon.jwt.secret' => \Tymon\JWTAuth\Console\JWTGenerateSecretCommand::class,
+        'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
+        'command.debugbar.clear' => \Barryvdh\Debugbar\Console\ClearCommand::class,
         'omgzui' => \OMGZui\OMGZui\Demo::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'validation.presence' => \Illuminate\Validation\DatabasePresenceVerifier::class,
