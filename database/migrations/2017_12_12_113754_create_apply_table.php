@@ -19,7 +19,6 @@ class CreateApplyTable extends Migration
             $table->increments('id');
             $table->uuid('uuid');
             $table->integer('group_id')->default(static::DEFAULT)->comment('组别id');
-//            $table->text('apply_require')->comment('报名要求');
             $table->string('name')->default(static::DEFAULT)->comment('姓名');
             $table->string('email')->unique()->default(static::DEFAULT)->comment('邮箱');
             $table->enum('certificate',[1,2])->default(static::ENUM_DEFAULT)->comment('证件：1/身份证 2/护照');

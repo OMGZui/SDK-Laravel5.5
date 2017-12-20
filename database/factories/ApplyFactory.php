@@ -1,14 +1,13 @@
 <?php
 
 use Faker\Generator as Faker;
-use App\Models\Apply;
 use Illuminate\Support\Carbon;
 
-$factory->define(Apply::class, function (Faker $faker) {
+$factory->define(\App\Models\Apply::class, function (Faker $faker_en) {
+    $faker = \Faker\Factory::create('zh_CN');
     return [
         'uuid' => $faker->uuid,
-        'group_id' => $faker->randomDigit,
-//        'apply_require' => $faker->text,
+        'group_id' => $faker->randomElement(range(1,16)),
         'name' => $faker->name,
         'email' => $faker->email,
         'certificate' => $faker->randomElement([1,2]),

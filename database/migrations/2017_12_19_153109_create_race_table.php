@@ -20,7 +20,6 @@ class CreateRaceTable extends Migration
             $table->uuid('uuid');
             $table->integer('user_id',false,true)->default(static::DEFAULT)->comment('用户id');
             $table->integer('col_id',false,true)->default(static::DEFAULT)->comment('集合id');
-            $table->integer('group_id',false,true)->default(static::DEFAULT)->comment('组别id');
             $table->string('cover')->default(static::DEFAULT)->comment('封面');
             $table->string('region',50)->default(static::DEFAULT)->comment('地区');
             $table->string('name',50)->default(static::DEFAULT)->comment('比赛名称');

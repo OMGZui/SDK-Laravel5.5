@@ -18,8 +18,8 @@ class CreateRaceGroupTable extends Migration
         Schema::create('race_group', function (Blueprint $table) {
             $table->increments('id');
             $table->uuid('uuid');
+            $table->integer('race_id',false,true)->default(static::DEFAULT)->comment('赛事id');
             $table->dateTime('start_at')->comment('开始时间');
-            $table->integer('user_id',false,true)->default(static::DEFAULT)->comment('组别');
             $table->string('distance',50)->default(static::DEFAULT)->comment('距离');
             $table->string('elevation',50)->default(static::DEFAULT)->comment('海拔');
             $table->string('fee',50)->default(static::DEFAULT)->comment('报名费');
@@ -30,7 +30,7 @@ class CreateRaceGroupTable extends Migration
             $table->string('route',2000)->default(static::DEFAULT)->comment('路线');
             $table->timestamps();
             $table->softDeletes();
-            $table->index('user_id');
+            $table->index('race_id');
         });
     }
 

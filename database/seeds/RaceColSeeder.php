@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class ApplyTableSeeder extends Seeder
+class RaceColSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,6 @@ class ApplyTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(\App\Models\Apply::class, 16)->create();
+        factory(\App\Models\Race\RaceCol::class, 16)->create();
     }
 }

@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-use App\models\Race\Race;
+use App\Models\Race\Race;
 
 class RaceRepository extends BaseRepository
 {

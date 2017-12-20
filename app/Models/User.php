@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Race\Race;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
@@ -46,5 +47,15 @@ class User extends Authenticatable implements JWTSubject
     public function getJWTCustomClaims()
     {
         return [];
+    }
+
+    /**
+     * 一个用户可以创建多个赛事
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function races()
+    {
+        return $this->hasMany(Race::class);
     }
 }

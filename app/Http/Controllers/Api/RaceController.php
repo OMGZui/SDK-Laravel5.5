@@ -2,15 +2,19 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Requests\ApplyRequest;
-use App\Repositories\ApplyRepository;
+use App\Http\Requests\RaceRequest;
+use App\Repositories\RaceRepository;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 use Webpatser\Uuid\Uuid;
 
-class ApplyController extends ApiController
+class RaceController extends ApiController
 {
-    public function __construct(ApplyRepository $repository)
+
+    public function __construct(RaceRepository $repository)
     {
         parent::__construct($repository);
+        $this->middleware('jwt');
     }
 
     /**
@@ -27,13 +31,19 @@ class ApplyController extends ApiController
     /**
      * 新增
      *
-     * @param ApplyRequest $request
+     * @param Request $request
      * @return \Illuminate\Http\JsonResponse
      * @throws \Exception
      */
-    public function store(ApplyRequest $request)
+    public function store(Request $request)
     {
         $input = $request->input();
+
+        $validator = Validator::make($input,(new RaceRequest())->rules());
+
+        if ($validator->fails()){
+            return $this->response->withError($validator->messages());
+        }
 
         $data = array_merge(
             $input,
@@ -63,11 +73,11 @@ class ApplyController extends ApiController
     /**
      * 更新
      *
-     * @param ApplyRequest $request
+     * @param RaceRequest $request
      * @param $id
      * @return \Illuminate\Http\JsonResponse
      */
-    public function update(ApplyRequest $request, $id)
+    public function update(RaceRequest $request, $id)
     {
 
         $data = $request->input();
