@@ -67,13 +67,14 @@ class Response
     /**
      * Make a 204 no content response.
      *
+     * @param array $message
      * @return \Illuminate\Http\JsonResponse
      */
-    public function withNoContent()
+    public function withNoContent($message = ['message' => '操作成功'])
     {
         return $this->setStatusCode(
             HttpResponse::HTTP_NO_CONTENT
-        )->json();
+        )->json($message);
     }
 
     /**
@@ -173,7 +174,6 @@ class Response
             'messages' => is_array($message) ? $message : [$message]
         ]);
     }
-
     /**
      * Make a JSON response with the transformed items.
      *

@@ -25,4 +25,21 @@ class ApiController extends Controller
 
         $this->response = new Response(response(), new Transform($manger));
     }
+
+    /**
+     * 封装表单验证
+     *
+     * @param $input
+     * @param $rules
+     * @return bool|\Illuminate\Support\MessageBag
+     */
+    public function validator($input, $rules)
+    {
+        $validator = \Validator::make($input,$rules);
+
+        if ($validator->fails()){
+            return $validator->messages();
+        }
+        return false;
+    }
 }

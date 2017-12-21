@@ -3,6 +3,7 @@
 namespace App\Http;
 
 use App\Http\Middleware\CheckApi;
+use App\Http\Middleware\Cross;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -59,5 +60,6 @@ class Kernel extends HttpKernel
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'jwt' => CheckApi::class,
+        'cross' => Cross::class,
     ];
 }

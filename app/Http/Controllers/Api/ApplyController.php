@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Requests\ApplyRequest;
 use App\Repositories\ApplyRepository;
+use Illuminate\Http\Request;
 use Webpatser\Uuid\Uuid;
 
 class ApplyController extends ApiController
@@ -11,6 +12,7 @@ class ApplyController extends ApiController
     public function __construct(ApplyRepository $repository)
     {
         parent::__construct($repository);
+        $this->middleware(['cross','jwt']);
     }
 
     /**
@@ -27,13 +29,18 @@ class ApplyController extends ApiController
     /**
      * 新增
      *
-     * @param ApplyRequest $request
+     * @param Request $request
      * @return \Illuminate\Http\JsonResponse
      * @throws \Exception
      */
-    public function store(ApplyRequest $request)
+    public function store(Request $request)
     {
         $input = $request->input();
+
+        $messages = $this->validator($input,(new ApplyRequest())->rules());
+        if ($messages){
+            return $this->response->json($messages);
+        }
 
         $data = array_merge(
             $input,
@@ -63,16 +70,20 @@ class ApplyController extends ApiController
     /**
      * 更新
      *
-     * @param ApplyRequest $request
+     * @param Request $request
      * @param $id
      * @return \Illuminate\Http\JsonResponse
      */
-    public function update(ApplyRequest $request, $id)
+    public function update(Request $request, $id)
     {
+        $input = $request->input();
 
-        $data = $request->input();
+        $messages = $this->validator($input,(new ApplyRequest())->rules());
+        if ($messages){
+            return $this->response->json($messages);
+        }
 
-        $this->repository->update($id, $data);
+        $this->repository->update($id, $input);
 
         return $this->response->withNoContent();
     }

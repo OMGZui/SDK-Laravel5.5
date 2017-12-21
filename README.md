@@ -26,7 +26,7 @@ phpunit
 - [ ] 资源Resources
 - [ ] 异常Exceptions
 - [x] 控制器Controllers
-- [ ] 中间件Middleware
+- [x] 中间件Middleware
 - [x] 请求Requests
 - [x] 邮件Mails
 - [x] 模型Models

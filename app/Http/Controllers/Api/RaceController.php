@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Api;
 use App\Http\Requests\RaceRequest;
 use App\Repositories\RaceRepository;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
 use Webpatser\Uuid\Uuid;
 
 class RaceController extends ApiController
@@ -39,10 +38,9 @@ class RaceController extends ApiController
     {
         $input = $request->input();
 
-        $validator = Validator::make($input,(new RaceRequest())->rules());
-
-        if ($validator->fails()){
-            return $this->response->withError($validator->messages());
+        $messages = $this->validator($input,(new RaceRequest())->rules());
+        if ($messages){
+            return $this->response->json($messages);
         }
 
         $data = array_merge(
@@ -73,16 +71,20 @@ class RaceController extends ApiController
     /**
      * 更新
      *
-     * @param RaceRequest $request
+     * @param Request $request
      * @param $id
      * @return \Illuminate\Http\JsonResponse
      */
-    public function update(RaceRequest $request, $id)
+    public function update(Request $request, $id)
     {
+        $input = $request->input();
 
-        $data = $request->input();
+        $messages = $this->validator($input,(new RaceRequest())->rules());
+        if ($messages){
+            return $this->response->json($messages);
+        }
 
-        $this->repository->update($id, $data);
+        $this->repository->update($id, $input);
 
         return $this->response->withNoContent();
     }
