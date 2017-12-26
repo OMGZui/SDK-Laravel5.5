@@ -36,7 +36,6 @@ class CreateRaceTable extends Migration
             $table->softDeletes();
             $table->index('user_id');
             $table->index('col_id');
-            $table->index('group_id');
             $table->index('name');
         });
     }

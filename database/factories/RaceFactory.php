@@ -9,7 +9,6 @@ $factory->define(\App\Models\Race\Race::class, function (Faker $faker_en) {
         'uuid' => $faker->uuid,
         'user_id' => 1,
         'col_id' => $faker->randomElement(range(1, 30)),
-        'group_id' => 1,
         'cover' => $faker->imageUrl(255),
         'region' => $faker->randomElement(['大陆', '港澳台']),
         'name' => $faker->name,
